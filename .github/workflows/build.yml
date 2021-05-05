@@ -43,5 +43,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"iostaf-sf_roslyn-analyzers" /o:"iostaf-sf-org" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet restore src/Tools/Metrics/Metrics.csproj
           dotnet build --no-restore --configuration "Release" src/Tools/Metrics/Metrics.csproj
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
