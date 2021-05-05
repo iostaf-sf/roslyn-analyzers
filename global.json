@@ -1,13 +1,13 @@
 {
     "tools": {
-      "dotnet": "3.1.200",
+      "dotnet": "5.0.202",
       "vs": {
         "version": "16.6"
       },
       "xcopy-msbuild": "16.6.5-alpha1"
     },
     "sdk": {
-      "version": "3.1.200",
+      "version": "5.0.202",
       "rollForward": "patch"
     },
     "msbuild-sdks": {
